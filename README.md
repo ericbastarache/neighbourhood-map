@@ -1,6 +1,8 @@
 # Neighbourhood-Map
 ## neighbourhood map project
 
+![alt tag](https://github.com/ericbastarache/ericbastarache.github.io/img/portfolio/neighbourhood.png)
+
 I used the Google Maps API in combination with the Foursquare API to pull data about various tourist attractions in the Toronto area.
 
 #The tourist attractions that can be found on the map include(in no particular order):
