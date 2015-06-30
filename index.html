@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Toronto Attractions</title>
-    <script src="//fast.eager.io/xbf9Vek1Fn.js"></script>
     <script src="js/offline.min.js"></script>
+    <script>
+        var run = function(){
+            if(Offline.state=== 'up')
+                Offline.check();
+        }
+        setInterval(run, 5000);
+    </script>
 </head>
     <!-- CSS displayed inline to reduce browser rendering time -->
 <style type="text/css">
