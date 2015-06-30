@@ -23,6 +23,39 @@
     ul { 
         list-style-type: none;
     }
+    ul li {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        background-color: #fff;
+        line-height: 30px;
+        border-bottom: solid 1px #ccc;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+    ul li:hover {
+        color: #fff;
+        background-color: #666;
+    }
+    body input {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        font-family: "Roboto", sans-serif;
+        display: block;
+        line-height: 30px;
+        font-size: 1.0em;
+        margin-left: 39px;
+        margin-bottom: 10px;
+        width: 80%;
+    }
+    .list-items {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        font-family: "Arial", sans-serif;
+        /*Transparency for the list view so that the map can still be seen in the background */
+        opacity: 0.6;
+    }
 
     </style>
     <!-- CSS for Offline.js -->
@@ -40,18 +73,12 @@
     <!-- CSS displayed inline to reduce browser rendering time -->
     
 </head>
-    
-    
-    
-
-    
 
 <body>
 
 
 
     <div class="map-canvas" id="map-canvas"></div>
-
     
     <div id="list" class="list-items">
 		<input type="text" id="search" data-bind="event: {keyup: filter}" placeholder="Search" value="">
