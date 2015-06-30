@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Toronto Attractions</title>
     <script src="//fast.eager.io/xbf9Vek1Fn.js"></script>
@@ -27,6 +28,17 @@
     ul { 
         list-style-type: none;
     }
+=======
+    <title>Toronto Attractions</title>
+</head>
+    <!-- CSS displayed inline to reduce browser rendering time -->
+<style type="text/css">
+    html { height: 100%; margin: 0; padding: 0 }
+    body { height: 100%; margin: 0; padding: 0 }
+    #map-canvas { height: 100%; margin: 0; padding: 0}
+    #list { z-index: 0 }
+    ul { list-style-type: none; }
+>>>>>>> origin/master
     ul li {
         display: block;
         text-decoration: none;
@@ -64,7 +76,11 @@
 <body>
 
 
+<<<<<<< HEAD
     <div class="map-canvas" id="map-canvas"></div>
+=======
+    <div id="map-canvas"></div>
+>>>>>>> origin/master
     
     <div id="list" class="list-items">
 		<input type="text" id="search" data-bind="event: {keyup: filter}" placeholder="Search" value="">
