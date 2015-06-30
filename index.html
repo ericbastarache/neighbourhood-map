@@ -2,38 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Neighbourhood Map</title>
-    <!--<link rel="stylesheet" href="css/style.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Toronto Attractions</title>
+    <script src="//fast.eager.io/xbf9Vek1Fn.js"></script>
+    <script src="js/offline.min.js"></script>
 </head>
+    <!-- CSS displayed inline to reduce browser rendering time -->
 <style type="text/css">
-  html { height: 100% }
-  body { height: 100%; margin: 0; padding: 0 }
-  #map-canvas { height: 100% }
+    html { 
+        height: 100%;
+        margin: 0; 
+        padding: 0
+    }
+    body { 
+        height: 100%;
+        margin: 0; 
+        padding: 0 
+    }
+    .map-canvas { 
+        height: 100%; 
+        margin: 0; 
+        padding: 0
+    }
+    ul { 
+        list-style-type: none;
+    }
+    ul li {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        background-color: #fff;
+        line-height: 30px;
+        border-bottom: solid 1px #ccc;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+    ul li:hover {
+        color: #fff;
+        background-color: #666;
+    }
+    body input {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        font-family: "Roboto", sans-serif;
+        display: block;
+        line-height: 30px;
+        font-size: 1.0em;
+        margin-left: 39px;
+        margin-bottom: 10px;
+        width: 80%;
+    }
+    .list-items {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        font-family: "Arial", sans-serif;
+        /*Transparency for the list view so that the map can still be seen in the background */
+        opacity: 0.6;
+    }
 </style>
 <body>
 
-    <form id="form-container" class="form-container">
-        <label for="street">Street: </label><input type="text" id="street" value="">
-        <label for="city">City: </label><input type="text" id="city" value="">
-        <button id="submit-btn">Submit</button>
-    </form>
 
-    <div id="map-canvas"></div>
+    <div class="map-canvas" id="map-canvas"></div>
+    
+    <div id="list" class="list-items">
+		<input type="text" id="search" data-bind="event: {keyup: filter}" placeholder="Search" value="">
+		<ul class="location" data-bind="foreach: placeList">
+			<li data-bind="text: title, click: $parent.displayInfo"></li>
+		</ul>
+	</div> 
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuZvM0SnRux5Ck467JDrE3g-PlpTjYmgc"></script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: { lat: -34.397, lng: 150.644},
-          zoom: 8
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    <script src="js/libs/jquery.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/knockout.js"></script>
+    <script src="js/app.js"></script>
+    
 </body>
 </html>
