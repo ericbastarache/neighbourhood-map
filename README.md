@@ -39,4 +39,4 @@ I used the Google Maps API in combination with the Foursquare API to pull data a
 
 The search box on the bottom right corner of the screen provides the ability to filter the map markers based on your input.
 
-The map can be found live at #(http://ericbastarache.github.io/neighbourhood-map/index.html)
+The map can be found live at (http://ericbastarache.github.io/neighbourhood-map/index.html)
