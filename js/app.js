@@ -73,11 +73,8 @@ var Markers = function(data){
     this.lng = ko.observable(data.lng);
     this.marker = ko.observable();
     this.rating = ko.observable();
-<<<<<<< HEAD
     this.url = ko.observable();
-=======
     this.url = ko.observable(data.url);
->>>>>>> origin/master
 };
 
 var MapModel = function(){
@@ -123,11 +120,10 @@ var MapModel = function(){
 
         var requestUrl = 'https://api.foursquare.com/v2/venues/explore?limit=1&ll=' + placeLocation.lat() + ',' + placeLocation.lng() + '&intent=match&query=' + placeLocation.title() + '&client_id=' + fourSquareClientId + '&client_secret=' + fourSquareSecret + '&v=20150629';
         
-<<<<<<< HEAD
+
         //var name, urlResult, url, rating, street, district;
-=======
+
         var name, urlResult, url, rating, street, district;
->>>>>>> origin/master
         
         //AJAX request from the foursquare API
         $.getJSON(requestUrl, function(data){
@@ -143,20 +139,12 @@ var MapModel = function(){
         
         //Initialize the bounce animation for the markers here
         function bounce(){
-<<<<<<< HEAD
             if(placeLocation.marker.getAnimation() !== null){
-=======
-            if(placeLocation.marker.getAnimation() != null){
->>>>>>> origin/master
                 placeLocation.marker.setAnimation(null);
             } else {
                 placeLocation.marker.setAnimation(google.maps.Animation.BOUNCE);
             }
-<<<<<<< HEAD
         }
-=======
-        };
->>>>>>> origin/master
         
         //Set the content of the information window for the selected map marker
         google.maps.event.addListener(placeLocation.marker, 'click', function(){
@@ -189,19 +177,12 @@ var MapModel = function(){
     //Display the information for the given map marker on click
     mapModel.displayInfo = function(placeLocation){
         google.maps.event.trigger(placeLocation.marker, 'click');
-<<<<<<< HEAD
     };
+    
 };
    
 
     //Initialize the map to center on downtown Toronto where the tourist attractions are
-=======
-    }
-};
-   
-
-    //Initialise the map to center on downtown Toronto where the tourist attractions are
->>>>>>> origin/master
     //With a zoom of 14 to get closer without the need to manually zoom
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         center: new google.maps.LatLng(43.645409, -79.382172),
