@@ -2,7 +2,8 @@
 ## neighbourhood map project
 
 I used the Google Maps API in combination with the Foursquare API to pull data about various tourist attractions in the Toronto area.
-The tourist attractions that can be found on the map include(in no particular order):
+
+#The tourist attractions that can be found on the map include(in no particular order):
 
 1. Air Canada Centre
 2. Art Gallery of Ontario
@@ -15,7 +16,7 @@ The tourist attractions that can be found on the map include(in no particular or
 9. Princess of Wales Theatre
 10. Hockey Hall of Fame
 
-The Foursquare API provides:
+# The Foursquare API provides:
 
 1. The name of the attraction
 2. The rating based on user reviews
@@ -23,12 +24,12 @@ The Foursquare API provides:
 4. The address of the attraction
 
 
-The Google Maps api provides:
+#The Google Maps api provides:
 
 1. The map!
 2. The markers on the map
 
-My AJAX call retrieves the data from the APIs and displays it on the map in the format of: 
+#My AJAX call retrieves the data from the APIs and displays it on the map in the format of: 
 
 1. Name
 2. Rating
@@ -38,4 +39,4 @@ My AJAX call retrieves the data from the APIs and displays it on the map in the 
 
 The search box on the bottom right corner of the screen provides the ability to filter the map markers based on your input.
 
-The map can be found live at (http://ericbastarache.github.io/neighbourhood-map/index.html)
+The map can be found live at #(http://ericbastarache.github.io/neighbourhood-map/index.html)
