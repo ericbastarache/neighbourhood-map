@@ -1,5 +1,4 @@
 # Neighbourhood-Map
-## neighbourhood map project
 
 ### Neighbourhood Map Project Preview
 ![alt tag](https://raw.github.com/ericbastarache/ericbastarache.github.io/master/img/portfolio/neighbourhood.png)
